@@ -1,0 +1,52 @@
+import { cn } from "@/lib/utils";
+import { useAuth } from "@clerk/clerk-react";
+import { Container } from "./container";
+import { LogoContainer } from "./logo-container";
+import { NavigationRoutes } from "./navigation-routes";
+import { NavLink } from "react-router-dom";
+import { ProfileContainer } from "./profile-container";
+import { ToggleContainer } from "./toggle-container";
+
+const Header = () => {
+  const { userId } = useAuth();
+
+  return (
+    <header
+      className={cn(
+        "w-full border-b bg-white/70 backdrop-blur-md border-purple-200 shadow-sm duration-150 transition-all ease-in-out"
+      )}
+    >
+      <Container>
+        <div className="flex items-center gap-4 w-full py-3">
+
+          <LogoContainer />
+
+          <nav className="hidden md:flex items-center gap-4">
+            <NavigationRoutes />
+            {userId && (
+              <NavLink
+                to={"/generate"}
+                className={({ isActive }) =>
+                  cn(
+                    "text-base text-neutral-700",
+                    isActive && "text-purple-700 font-semibold underline underline-offset-8"
+                  )
+                }
+              >
+                Take An Interview
+              </NavLink>
+            )}
+          </nav>
+
+          <div className="ml-auto flex items-center gap-6">
+            <ProfileContainer />
+            <ToggleContainer />
+          </div>
+
+        </div>
+      </Container>
+    </header>
+  );
+};
+
+export default Header;
