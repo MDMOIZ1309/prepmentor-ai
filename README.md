@@ -1,50 +1,28 @@
-# React + TypeScript + Vite
+📘 SmartAce – AI Powered Mock Interview Platform
+An AI-driven platform that helps students and job seekers practice interviews anytime, improve their communication, and receive instant AI-generated feedback.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Overview
+SmartAce is an AI-powered mock interview platform designed to bridge the gap between students and real interview environments. Many candidates fear interviews because they lack real-time practice, structured feedback, and exposure to domain-specific questions.
+SmartAce solves this problem by acting as a virtual AI interviewer, offering personalized questions, evaluating answers, and providing detailed performance insights — anytime, anywhere.
 
-Currently, two official plugins are available:
+🎯 Key Features
+✅ AI-Generated Interview Questions
+Generates role-specific technical and behavioral interview questions using advanced AI models.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ Real-Time Mock Interview Simulation
+Simulates an actual interview by presenting one question at a time.
 
-## Expanding the ESLint configuration
+✅ Instant AI Feedback
+Evaluates user responses and provides suggestions on clarity, accuracy, and communication style.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+✅ Progress Tracking Dashboard
+Stores past interviews, feedback, and improvements made over time.
 
-- Configure the top-level `parserOptions` property like this:
+✅ Modern, Responsive UI
+Clean, fast, and user-friendly interface designed using React and TailwindCSS.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+✅ Secure Authentication
+Uses Clerk authentication for smooth and secure user login.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+✅ Firebase Storage
+All interview data is stored securely using Firebase Firestore.
